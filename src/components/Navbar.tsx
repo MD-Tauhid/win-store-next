@@ -14,8 +14,7 @@ export default async function Navbar() {
         <nav className="w-full bg-[#004A43] text-white">
 
             {/* 🔹 TOP BAR */}
-            <div className="flex items-center justify-between px-6 py-4">
-
+            <div className="flex flex-col md:flex-row items-center justify-between px-6 py-4">
                 {/* LOGO */}
                 <Link href="/" className="flex items-center gap-2">
                     {/* <span className="text-2xl font-bold">WIN</span>
@@ -44,6 +43,7 @@ export default async function Navbar() {
                         🔍
                     </button>
                 </div>
+
 
                 {/* RIGHT ICONS */}
                 <div className="flex items-center gap-6">

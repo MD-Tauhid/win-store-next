@@ -4,8 +4,6 @@ import { getCart, removeFromCartServer } from '@/app/actions/cart'
 export default async function CartPage() {
     const cart = await getCart()
     const total = cart.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0);
-
-    console.log(cart);
     
 
     return (

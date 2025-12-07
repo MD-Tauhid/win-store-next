@@ -7,3 +7,9 @@ export interface Product {
   image?: string;
   rating?: { rate: number; count: number };
 }
+
+export interface ProductResponse {
+  data: Product[];
+  message: string;
+  success: boolean;
+}

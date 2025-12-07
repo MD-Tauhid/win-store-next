@@ -1,6 +1,7 @@
 import HeroBanner from '@/components/HeroBanner'
 import CategoriesSection from '@/components/CategoriesSection'
 import NewArrivals from '@/components/NewArrivals'
+import BestDeals from '@/components/BestDeals'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <CategoriesSection />
       <div className="max-w-7xl mx-auto px-6">
         <NewArrivals />
+        <BestDeals />
       </div>
     </div>
   )

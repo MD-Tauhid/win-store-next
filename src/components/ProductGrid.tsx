@@ -5,15 +5,20 @@ import { getAllProducts } from '@/app/actions/products'
 import { Product } from '@/types/product'
 
 
-export default async function ProductGrid() {
+export default async function ProductGrid({ isNew }: { isNew: boolean }) {
     const products = await getAllProducts()
-
+    const newProductsData = products.data.slice(0, 10);
     return (
         <Suspense fallback={<ProductSkeleton />}>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-                {products.data.slice(0, 10).map((p: Product) => (
+                {isNew ? newProductsData.map((p: Product) => (
                     <ProductCard key={p.id} product={p} />
-                ))}
+                ))
+                    :
+                    products.data.map((p: Product) => (
+                        <ProductCard key={p.id} product={p} />
+                    ))
+                }
             </div>
         </Suspense>
     )

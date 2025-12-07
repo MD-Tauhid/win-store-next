@@ -1,7 +1,7 @@
 'use server'
 import { fetcher } from '@/lib/fetcher'
 import { CategoryResponse } from '@/types/category'
-import { Product, ProductResponse } from '@/types/product'
+import { Product, ProductResponse, SingleProductResponse } from '@/types/product'
 
 const BASE = 'https://mm-assesment-server.vercel.app/api/v1/products'
 
@@ -17,6 +17,6 @@ export async function getProductsByCategory(category: string): Promise<ProductRe
   return fetcher(`${BASE}/category/${encodeURIComponent(category)}`)
 }
 
-export async function getProductById(id: string | number): Promise<Product | null> {
+export async function getProductById(id: string | number): Promise<SingleProductResponse | null> {
   return fetcher(`${BASE}/${id}`)
 }

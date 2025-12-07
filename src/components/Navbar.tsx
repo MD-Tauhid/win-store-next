@@ -89,7 +89,7 @@ export default async function Navbar() {
 
                 {/* SOCIAL LINKS */}
                 <div className="flex items-center gap-4">
-                    <Image src="/icons/facebook.png" alt="Facebook" className='cursor-pointer' width={16} height={16} />
+                    <Image src="/icons/facebook.png" alt="Facebook" className='cursor-pointer' width={10} height={10} />
                     <Image src="/icons/twitter.png" alt="Twitter" className='cursor-pointer' width={16} height={16} />
                     <Image src="/icons/linkedin.png" alt="LinkedIn" className='cursor-pointer' width={16} height={16} />
                     <Image src="/icons/instagram.png" alt="Instagram" className='cursor-pointer' width={16} height={16} />

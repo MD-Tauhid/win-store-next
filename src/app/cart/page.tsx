@@ -1,11 +1,12 @@
 import { getCart, removeFromCartServer } from '@/app/actions/cart'
-import Image from 'next/image'
 
 
 export default async function CartPage() {
     const cart = await getCart()
-    const total = cart.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0)
+    const total = cart.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0);
 
+    console.log(cart);
+    
 
     return (
         <div className="max-w-5xl mx-auto p-6">
@@ -26,7 +27,7 @@ export default async function CartPage() {
                             className="bg-white p-4 border rounded flex items-center justify-between"
                         >
                             <div className="flex items-center gap-4">
-                                <Image
+                                <img
                                     src={item.image}
                                     alt={item.title}
                                     className="w-20 h-20 object-contain border rounded"

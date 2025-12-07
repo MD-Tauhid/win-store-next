@@ -13,3 +13,9 @@ export interface ProductResponse {
   message: string;
   success: boolean;
 }
+
+export interface SingleProductResponse {
+  data: Product;
+  message: string;
+  success: boolean;
+}

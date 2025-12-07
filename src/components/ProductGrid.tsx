@@ -10,8 +10,8 @@ export default async function ProductGrid() {
 
     return (
         <Suspense fallback={<ProductSkeleton />}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {products.data.map((p: Product) => (
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+                {products.data.slice(0, 10).map((p: Product) => (
                     <ProductCard key={p.id} product={p} />
                 ))}
             </div>

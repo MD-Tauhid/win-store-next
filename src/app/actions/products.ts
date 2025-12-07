@@ -13,7 +13,7 @@ export async function getCategories(): Promise<CategoryResponse> {
   return fetcher(`${BASE}/categories`)
 }
 
-export async function getProductsByCategory(category: string): Promise<Product[]> {
+export async function getProductsByCategory(category: string): Promise<ProductResponse> {
   return fetcher(`${BASE}/category/${encodeURIComponent(category)}`)
 }
 
